@@ -1,15 +1,18 @@
 """
 Vercel Serverless Function — /api/contact
-Environment variables (isi di Vercel dashboard > Settings > Environment Variables):
-- GMAIL_ADDRESS
-- GMAIL_APP_PASSWORD
-- CONTACT_RECEIVER
+VERSI DEBUG SEMENTARA: kalau ada error, detail lengkapnya (termasuk traceback)
+dikirim balik ke browser lewat response JSON, supaya gampang dibaca dari
+tab Network > Response tanpa perlu buka dashboard Vercel.
+
+JANGAN dipakai permanen di production kalau sudah beres — nanti kita
+kembalikan ke versi yang gak bocorin detail internal.
 """
 
 import json
 import os
 import re
 import smtplib
+import traceback
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from http.server import BaseHTTPRequestHandler
@@ -39,38 +42,45 @@ class handler(BaseHTTPRequestHandler):
         try:
             length = int(self.headers.get("Content-Length", 0))
             data = json.loads(self.rfile.read(length) or b"{}")
-        except (ValueError, json.JSONDecodeError):
-            return self._respond(400, {"status": "error", "detail": "Body tidak valid"})
 
-        name = (data.get("name") or "").strip()
-        email = (data.get("email") or "").strip()
-        message = (data.get("message") or "").strip()
+            name = (data.get("name") or "").strip()
+            email = (data.get("email") or "").strip()
+            message = (data.get("message") or "").strip()
 
-        if not name or not message:
-            return self._respond(400, {"status": "error", "detail": "Nama dan pesan wajib diisi"})
-        if not EMAIL_RE.match(email):
-            return self._respond(400, {"status": "error", "detail": "Email tidak valid"})
+            if not name or not message:
+                return self._respond(400, {"status": "error", "detail": "Nama dan pesan wajib diisi"})
+            if not EMAIL_RE.match(email):
+                return self._respond(400, {"status": "error", "detail": "Email tidak valid"})
 
-        gmail_address = os.environ.get("GMAIL_ADDRESS")
-        gmail_app_password = os.environ.get("GMAIL_APP_PASSWORD")
-        receiver = os.environ.get("CONTACT_RECEIVER", gmail_address)
+            gmail_address = os.environ.get("GMAIL_ADDRESS")
+            gmail_app_password = os.environ.get("GMAIL_APP_PASSWORD")
+            receiver = os.environ.get("CONTACT_RECEIVER", gmail_address)
 
-        if not gmail_address or not gmail_app_password:
-            return self._respond(500, {"status": "error", "detail": "Konfigurasi email belum diatur di server"})
+            if not gmail_address or not gmail_app_password:
+                return self._respond(500, {
+                    "status": "error",
+                    "detail": "Konfigurasi email belum diatur di server",
+                    "debug_gmail_address_set": bool(gmail_address),
+                    "debug_gmail_app_password_set": bool(gmail_app_password),
+                })
 
-        msg = MIMEMultipart()
-        msg["From"] = gmail_address
-        msg["To"] = receiver
-        msg["Subject"] = f"[Portofolio] Pesan baru dari {name}"
-        msg["Reply-To"] = email
-        msg.attach(MIMEText(f"Nama: {name}\nEmail: {email}\n\nPesan:\n{message}", "plain"))
+            msg = MIMEMultipart()
+            msg["From"] = gmail_address
+            msg["To"] = receiver
+            msg["Subject"] = f"[Portofolio] Pesan baru dari {name}"
+            msg["Reply-To"] = email
+            msg.attach(MIMEText(f"Nama: {name}\nEmail: {email}\n\nPesan:\n{message}", "plain"))
 
-        try:
             with smtplib.SMTP("smtp.gmail.com", 587) as server:
                 server.starttls()
                 server.login(gmail_address, gmail_app_password)
                 server.sendmail(gmail_address, receiver, msg.as_string())
-        except Exception as e:
-            return self._respond(500, {"status": "error", "detail": f"Gagal mengirim email: {e}"})
 
-        return self._respond(200, {"status": "sent"})
+            return self._respond(200, {"status": "sent"})
+
+        except Exception as e:
+            return self._respond(500, {
+                "status": "error",
+                "detail": f"{type(e).__name__}: {e}",
+                "traceback": traceback.format_exc()
+            })
