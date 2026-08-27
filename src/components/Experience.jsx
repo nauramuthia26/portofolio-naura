@@ -33,7 +33,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="section-pad border-t border-line overflow-hidden">
-      <SideLabel text="EXPERIENCE" />
+      <SideLabel text="EXPERIENCES" />
       <div className="relative">
         <h2 className="font-display font-extrabold text-3xl md:text-4xl mt-4 mb-10">Experiences</h2>
 

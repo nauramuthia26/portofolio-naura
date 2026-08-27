@@ -5,7 +5,7 @@ import ImageCarousel from './ImageCarousel.jsx'
 export default function Projects() {
   return (
     <section id="projects" className="section-pad border-t border-line overflow-hidden">
-      <SideLabel text="PROYEK" />
+      <SideLabel text="PROJECTS" />
       <div className="relative">
         <h2 className="font-display font-extrabold text-3xl md:text-4xl mt-4 mb-10">Projects</h2>
         <div className="space-y-10">

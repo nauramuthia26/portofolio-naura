@@ -27,16 +27,16 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="#projects" className="px-6 py-3 rounded-full bg-navy text-white font-mono text-xs uppercase tracking-wide hover:bg-navy-light transition-colors">
-              Lihat Proyek
+              View Projects
             </a>
             <a href="#contact" className="px-6 py-3 rounded-full border border-line text-ink font-mono text-xs uppercase tracking-wide hover:border-navy-light hover:text-navy-light transition-colors">
-              Hubungi Saya
+              Contact Me
             </a>
           </div>
         </div>
 
         <div className="relative">
-          <div className="aspect-[4/5] bg-surface border border-line overflow-hidden rounded-2xl">
+          <div className="aspect-[4/5] bg-surface border-2 border-navy-light border-line overflow-hidden rounded-2xl">
             <img
               src={profile.photo}
               alt={profile.name}

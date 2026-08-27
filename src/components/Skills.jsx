@@ -74,10 +74,10 @@ function SkillGroup({ title, subtitle, items, fallback }) {
 export default function Skills() {
   return (
     <section id="skills" className="section-pad border-t border-line bg-surface overflow-hidden">
-      <SideLabel text="SKILL" />
+      <SideLabel text="SKILLS" />
       <div className="relative">
         <div className="text-center max-w-xl mx-auto mb-14">
-          <h2 className="font-display font-extrabold text-3xl md:text-4xl">Tools & Tecknologies</h2>
+          <h2 className="font-display font-extrabold text-3xl md:text-4xl">Tools & Technologies</h2>
           <p className="text-muted mt-3">
           Technologies that i use to accomodate my programming needs.
           </p>

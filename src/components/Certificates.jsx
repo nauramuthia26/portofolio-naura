@@ -4,7 +4,7 @@ import { ClassTag, SideLabel } from './SectionLabel.jsx'
 export default function Certificates() {
   return (
     <section id="certificates" className="section-pad border-t border-line overflow-hidden">
-      <SideLabel text="SERTIFIKAT" />
+      <SideLabel text="CERTIFICATES" />
       <div className="relative">
         <h2 className="font-display font-extrabold text-3xl md:text-4xl mt-4 mb-10">Certificates</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
