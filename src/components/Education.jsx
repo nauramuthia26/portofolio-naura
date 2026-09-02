@@ -15,9 +15,17 @@ export default function Education() {
                 <p className="text-navy-light text-sm mt-1">{edu.degree}</p>
                 <p className="text-muted text-sm mt-3 leading-relaxed max-w-2xl">{edu.description}</p>
               </div>
-              <span className="text-sm font-medium px-3 py-1.5 rounded-full bg-surfaceAlt border border-line text-muted shrink-0">
-                {edu.period}
-              </span>
+
+              <div className="flex flex-row md:flex-col items-center md:items-end gap-2 shrink-0">
+                <span className="text-sm font-medium px-3 py-1.5 rounded-full bg-surfaceAlt border border-navy-light/50 text-muted">
+                  {edu.period}
+                </span>
+                {edu.nilai && (
+                  <span className="text-sm font-semibold px-3 py-1.5 rounded-full bg-navy border border-line text-white">
+                    {edu.nilai}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>

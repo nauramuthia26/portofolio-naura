@@ -30,14 +30,14 @@ export const education = [
   {
     institution: "UPN \"Veteran\" Jakarta",
     degree: "Bachelor of Informatics, Faculty of Computer Science",
-    nilai: "IPK 3.86 / 4.00",
+    nilai: "GPA 3.86 / 4.00",
     period: "2022 — 2026",
     description: "Explored various areas of Computer Science through coursework, training, and internships, eventually developing a strong interest in data, machine learning, and web development, particularly frontend development."
   },
   {
     institution: "SMA Negeri 12 Kota Tangerang",
     degree: "Mathematics and Natural Sciences (MIPA)",
-    nilai: "Rata-rata 88.2 / 100",
+    nilai: "GPA 88.2 / 100",
     period: "2019 — 2022",
     description: "Developed an interest in fields involving logic and quantitative reasoning, particularly mathematics. Outside academics, actively participated in the school student council (MPM) and extracurricular activities."
   }
