@@ -1,5 +1,5 @@
 import { education } from '../data.js'
-import { ClassTag, SideLabel } from './SectionLabel.jsx'
+import { SideLabel } from './SectionLabel.jsx'
 
 export default function Education() {
   return (
@@ -15,7 +15,7 @@ export default function Education() {
                 <p className="text-navy-light text-sm mt-1">{edu.degree}</p>
                 <p className="text-muted text-sm mt-3 leading-relaxed max-w-2xl">{edu.description}</p>
               </div>
-              <span className="font-mono text-xs px-3 py-1.5 rounded-full bg-surfaceAlt border border-line text-muted shrink-0">
+              <span className="text-sm font-medium px-3 py-1.5 rounded-full bg-surfaceAlt border border-line text-muted shrink-0">
                 {edu.period}
               </span>
             </div>

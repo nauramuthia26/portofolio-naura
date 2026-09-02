@@ -42,7 +42,7 @@ export default function ImageCarousel({ images }) {
       )}
 
       {current.caption && (
-        <p className="font-mono text-[11px] text-muted mt-2">
+        <p className="text-xs text-muted mt-2">
           {current.caption}{images.length > 1 ? ` · ${index + 1}/${images.length}` : ''}
         </p>
       )}

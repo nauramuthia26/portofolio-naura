@@ -112,7 +112,7 @@ export const projects = [
   },
   {
     tag: "class: proyek",
-    name: "WonshipFinder",
+    name: "WorshipFinder",
     period: "2025",
     summary: "A web application for finding places of worship based on type, typology, province, and regency.",
     tools: ["JavaScript", "HTML", "CSS"],

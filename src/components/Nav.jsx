@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const links = [
-  { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experiences' },
@@ -25,7 +24,7 @@ export default function Nav() {
           NAURA<span className="text-ink">.</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wide text-muted">
+        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-muted">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="hover:text-navy-light transition-colors">{l.label}</a>
@@ -44,7 +43,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <ul className="md:hidden flex flex-col border-t border-line px-6 py-4 gap-4 font-mono text-xs uppercase tracking-wide text-muted bg-bg">
+        <ul className="md:hidden flex flex-col border-t border-line px-6 py-4 gap-4 text-sm font-medium text-muted bg-bg">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} onClick={handleLinkClick} className="block hover:text-navy-light transition-colors">

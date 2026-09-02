@@ -32,7 +32,7 @@ export default function Contact() {
           </p>
           <div className="flex gap-4 mt-4">
             {profile.socials.map((s) => (
-              <a key={s.label} href={s.url} className="font-mono text-xs uppercase tracking-wide text-muted hover:text-navy-light">
+              <a key={s.label} href={s.url} className="text-sm font-medium text-muted hover:text-navy-light">
                 {s.label}
               </a>
             ))}
@@ -41,22 +41,22 @@ export default function Contact() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="font-mono text-xs uppercase tracking-wide text-muted block mb-1">Name</label>
+            <label htmlFor="name" className="text-sm font-medium text-muted block mb-1">Name</label>
             <input id="name" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="w-full rounded-lg border border-line bg-surface px-4 py-3 focus:outline-none focus:border-navy-light" />
           </div>
           <div>
-            <label htmlFor="email" className="font-mono text-xs uppercase tracking-wide text-muted block mb-1">Email</label>
+            <label htmlFor="email" className="text-sm font-medium text-muted block mb-1">Email</label>
             <input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full rounded-lg border border-line bg-surface px-4 py-3 focus:outline-none focus:border-navy-light" />
           </div>
           <div>
-            <label htmlFor="message" className="font-mono text-xs uppercase tracking-wide text-muted block mb-1">Message</label>
+            <label htmlFor="message" className="text-sm font-medium text-muted block mb-1">Message</label>
             <textarea id="message" required rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full rounded-lg border border-line bg-surface px-4 py-3 focus:outline-none focus:border-navy-light" />
           </div>
           <button type="submit" disabled={status === 'sending'}
-            className="px-6 py-3 rounded-full bg-navy text-white font-mono text-xs uppercase tracking-wide hover:bg-navy-light transition-colors disabled:opacity-50">
+            className="px-6 py-3 rounded-full bg-navy text-white text-sm font-semibold hover:bg-navy-light transition-colors disabled:opacity-50">
             {status === 'sending' ? 'Mengirim...' : 'Send a message'}
           </button>
           {status === 'success' && <p className="text-sm text-green-400">Message Sent. Thank You!</p>}
