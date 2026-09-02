@@ -93,7 +93,7 @@ export const projects = [
     tag: "class: proyek",
     name: "PATTERNA",
     period: "2025 — 2026",
-    summary: "A Deep Learning-based system for classifying fabric types and quality, including experimentation and evaluation of multiple models to identify the best-performing model, followed by implementation as a full-stack web application. The system classifies fabrics into 10 classes (5 fabric types × 2 quality categories).",
+    summary: "PATTERNA is a full-stack web application that uses Deep Learning to classify fabric type and quality across 10 classes. The project compares several deep learning architectures and selects EfficientNetB0 as the best-performing model, achieving 82% accuracy and better rejection of non-fabric images. The system was deployed end-to-end with a React frontend on Vercel, FastAPI backend on Hugging Face Spaces, and Supabase PostgreSQL for data storage.",
     tools: ["React.js", "Python", "FastAPI", "TensorFlow/Keras", "Supabase PostgreSQL"],
     outcomes: [
       "The EfficientNetB0 model achieved 82% accuracy and demonstrated better rejection of non-fabric images compared with other models.",
@@ -114,7 +114,7 @@ export const projects = [
     tag: "class: proyek",
     name: "WorshipFinder",
     period: "2025",
-    summary: "A web application for finding places of worship based on type, typology, province, and regency.",
+    summary: "WorshipFinder is a web application for helping users find places of worship based on specific needs. It provides search and filtering features by worship place type, typology, province, and regency. The project primarily focused on implementing and testing the APIs and ensuring that the filtering and data retrieval functions work properly, while the frontend was kept simple and focused on the core features.",
     tools: ["JavaScript", "HTML", "CSS"],
     outcomes: [
       "Developed a web application for finding places of worship with filtering features based on multiple location categories and types of places of worship.",
@@ -131,7 +131,7 @@ export const projects = [
     tag: "class: proyek",
     name: "Effective Plan for UTBK",
     period: "2024",
-    summary: "Developed a web application interface to support UTBK preparation and learning.",
+    summary: "Effective Plan for UTBK is a web interface designed to help students organize their UTBK preparation more effectively. It provides features for creating study plans, monitoring study progress, and accessing curated learning materials. The project focused primarily on frontend development and user interface design, using JavaScript, HTML, and CSS without a backend implementation.",
     tools: ["JavaScript", "PHP", "HTML", "CSS"],
     outcomes: [
       "Developed a web application interface to support planning and monitoring of UTBK study activities.",
@@ -150,7 +150,7 @@ export const projects = [
     tag: "class: proyek",
     name: "Invasion Shooter",
     period: "2024",
-    summary: "Collaborated on developing a game using Unity, focusing on UI design, game flow, scene management, and visual asset integration.  ",
+    summary: "Invasion Shooter is a collaborative shooter game developed in Unity to practice game development. The project focused on UI design, game flow, and scene management, including transitions between the homepage, gameplay, level-up, and game-over screens. It also involved integrating visual assets and UI elements within the Unity Editor.",
     tools: ["Unity Editor"],
     outcomes: [
       "Developed a playable shooter game with integrated gameplay flow, user interface, and scene transitions.",

@@ -23,19 +23,9 @@ export default function Projects() {
                   <p className="text-sm font-semibold text-navy-light mt-6 mb-2">Tools</p>
                   <div className="flex flex-wrap gap-2">
                     {proj.tools.map((t) => (
-                      <span key={t} className="text-xs px-2 py-1 border border-line rounded-full text-muted">{t}</span>
+                      <span key={t} className="text-xs px-2 py-1 border border-navy-light/50 rounded-full text-muted">{t}</span>
                     ))}
                   </div>
-
-                  <p className="text-sm font-semibold text-navy-light mt-6 mb-2">Results</p>
-                  <ul className="space-y-1.5 text-muted text-sm">
-                    {proj.outcomes.map((o, j) => (
-                      <li key={j} className="flex gap-2">
-                        <span className="text-navy-light mt-1">•</span>
-                        <span>{o}</span>
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="flex gap-5 mt-6 items-center">
                     {proj.links.length > 0 ? (
