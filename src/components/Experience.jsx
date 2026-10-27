@@ -91,7 +91,7 @@ function OrganizationCard({ item }) {
       <h3 className="font-display font-bold text-2xl mt-3">{item.title}</h3>
       <p className="text-navy-light text-sm font-medium mt-1">{item.org}</p>
 
-      <p className="mt-4 text-muted leading-relaxed max-w-3xl">{item.summary}</p>
+      <p className="mt-4 text-muted leading-relaxed md:text-justify">{item.summary}</p>
 
       {item.documentation?.length > 0 && (
         <div className="mt-6 pt-6 border-t border-line">
