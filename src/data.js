@@ -175,34 +175,70 @@ export const organizations = [
     role: "Treasurer",
     period: "2024 - 2025",
     description: "Managed approximately IDR 33 million in incoming funds while ensuring financial transparency and balance. Monitored transactions, prepared monthly financial reports, and increased member compliance with cash contributions to 70%, resulting in more stable income and optimized spending.",
+    documentation: [
+      { src: "/senat-1.jpg", role: "Treasurer", caption: "ID Card" },
+      { src: "/senat-2.jpeg", role: "FIK 2024/25 General Election Activities", caption: "Head of the Supervising Committee" },
+      { src: "/senat-3.jpg", role: "Senat Day Out", caption: "Head of Consumption" },
+      { src: "/senat-4.jpeg", role: "Legislative School", caption: "Master of Ceremony" },
+      { src: "/senat-5.jpg", role: "Comparative Study with DPM FIB UI", caption: "Participant" },
+      { src: "/senat-6.jpeg", role: "FIK 2023/24 General Election Activities", caption: "Participant" }
+    ]
   },
   {
     tag: "class: organisasi",
     name: "Oh Be Shine",
     role: "Event Manager",
     period: "2024 - 2025",
-    description: "Responsible for planning, organizing, and ensuring the smooth execution of events by leading a 4-person team and coordinating with 55 external parties. Managed 5 major programs, including monthly meetings, 2 bonding sessions, and 2 external webinars."
+    description: "Responsible for planning, organizing, and ensuring the smooth execution of events by leading a 4-person team and coordinating with 55 external parties. Managed 5 major programs, including monthly meetings, 2 bonding sessions, and 2 external webinars.",
+    documentation: [
+      { src: "/obs-1.png", caption: "Event Manager Certificate" },
+      { src: "/obs-2.jpg", caption: "Best Divison" },
+      { src: "/obs-3.png", caption: "Weekly Meeting with Event Team" },
+      { src: "/obs-4.png", caption: "Event Team" },
+      { src: "/obs-5.jpeg", caption: "External Webinar Event Moderator" }
+    ]
   },
   {
     tag: "class: organisasi",
     name: "UKM Seni Tari Veteran Jakarta",
     role: "Traditional Dance Member", 
     period: "2022 - 2024",
-    description: "Participated in regular training sessions, cultural performances at various university events, and dance competitions outside campus. Contributed as an event committee member by supporting planning, coordination, and event execution in collaboration with members across divisions."
+    description: "Participated in regular training sessions, cultural performances at various university events, and dance competitions outside campus. Contributed as an event committee member by supporting planning, coordination, and event execution in collaboration with members across divisions.",
+    documentation: [
+      { src: "/stvj-1.jpeg", role: "STVJ Dance Competition Event 2024", caption: "Humas & LO Division" },
+      { src: "/stvj-2.jpeg", role: "Dance Workshop 2023", caption: "Event Divison" },
+      { src: "/stvj-3.jpeg", role: "Traditional Dance Competition 2024", caption: "Participant" },
+      { src: "/stvj-4.jpeg", role: "STVJ Dance Competition Event 2023", caption: "Event Division" },
+      { src: "/stvj-5.jpeg", role: "Traditional Dance Competition 2023", caption: "Participant" },
+      { src: "/stvj-6.jpeg", role: "Perform at a Campus Internal Event", caption: "Participant" }
+    ]
   },
   {
     tag: "class: organisasi",
     name: "Quran Reading and Writing Activities (Musholla Darussalam)",
     role: "Teaching Volunteer",
     period: "2023",
-    description: "Taught Quran reading and writing to children and participated in Islamic activities at the local prayer hall. Helped coordinate children’s activities and events to create an active and enjoyable learning environment."
+    description: "Taught Quran reading and writing to children and participated in Islamic activities at the local prayer hall. Helped coordinate children’s activities and events to create an active and enjoyable learning environment.",
+    documentation: [
+      { src: "/ngaji-1.jpeg"},
+      { src: "/ngaji-2.jpeg"},
+      { src: "/ngaji-3.jpeg"},
+      { src: "/ngaji-4.jpg"},
+      { src: "/ngaji-5.jpeg"}
+    ]
   },
   {
     tag: "class: organisasi",
     name: "Ratoh Jaroe Extracurricular",
     role: "Chairperson",
     period: "2021 - 2022",
-    description: "Led organizational meetings, arranged regular practice schedules, and coordinated 45 members to actively participate in various extracurricular activities and performances, strengthening team coordination and member discipline."
+    description: "Led organizational meetings, arranged regular practice schedules, and coordinated 45 members to actively participate in various extracurricular activities and performances, strengthening team coordination and member discipline.",
+    documentation: [
+      { src: "/saman-1.png", caption: "Extracurricular Leader Certificate" },
+      { src: "/saman-2.jpeg", caption: "Ratoh Jaroe Competition 2021" },
+      { src: "/saman-3.jpeg", caption: "Team Documentation" },
+      { src: "/saman-4.jpeg", caption: "Internal Member's Iftar Gathering" }
+    ]
   },
 ] 
 

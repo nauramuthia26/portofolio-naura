@@ -1,6 +1,7 @@
 import { internships, organizations } from '../data.js'
 import { SideLabel } from './SectionLabel.jsx'
 import ImageCarousel from './ImageCarousel.jsx'
+import PhotoGallery from './PhotoGallery.jsx'
 
 function buildProfessional() {
   return internships.map((x) => ({
@@ -22,12 +23,11 @@ function buildOrganizations() {
     org: x.name,
     period: x.period,
     summary: x.description,
-    tools: [],
-    outcomes: [],
     documentation: x.documentation || []
   }))
 }
 
+// Kartu magang: carousel di kiri, teks di kanan
 function ExperienceCard({ item }) {
   return (
     <article className="card rounded-2xl overflow-hidden">
@@ -52,7 +52,7 @@ function ExperienceCard({ item }) {
               <p className="text-sm font-semibold text-navy-light mt-6 mb-2">Tools</p>
               <div className="flex flex-wrap gap-2">
                 {item.tools.map((t) => (
-                  <span key={t} className="text-xs px-2 py-1 border border-line rounded-full text-muted">{t}</span>
+                  <span key={t} className="text-xs px-2 py-1 border border-navy-light/50 rounded-full text-muted">{t}</span>
                 ))}
               </div>
             </>
@@ -73,6 +73,31 @@ function ExperienceCard({ item }) {
           )}
         </div>
       </div>
+    </article>
+  )
+}
+
+// Kartu organisasi: teks di atas, galeri foto thumbnail di bawah
+function OrganizationCard({ item }) {
+  return (
+    <article className="card rounded-2xl p-6 md:p-8">
+      <div className="flex items-center gap-3 flex-wrap">
+        <span className="text-xs font-semibold px-2 py-1 rounded-full bg-navy/20 text-navy-light border border-navy/40">
+          {item.type}
+        </span>
+        <span className="text-sm text-muted">{item.period}</span>
+      </div>
+
+      <h3 className="font-display font-bold text-2xl mt-3">{item.title}</h3>
+      <p className="text-navy-light text-sm font-medium mt-1">{item.org}</p>
+
+      <p className="mt-4 text-muted leading-relaxed max-w-3xl">{item.summary}</p>
+
+      {item.documentation?.length > 0 && (
+        <div className="mt-6 pt-6 border-t border-line">
+          <PhotoGallery images={item.documentation} label="Documentation" />
+        </div>
+      )}
     </article>
   )
 }
@@ -98,7 +123,7 @@ export default function Experience() {
         </h3>
         <div className="space-y-10">
           {orgs.map((item, i) => (
-            <ExperienceCard key={i} item={item} />
+            <OrganizationCard key={i} item={item} />
           ))}
         </div>
       </div>
