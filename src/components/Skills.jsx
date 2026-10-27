@@ -1,6 +1,6 @@
 import { skills } from '../data.js'
 import { SideLabel } from './SectionLabel.jsx'
-import { Database, Lightbulb, Clock, Users, MessageCircle, Shuffle, Brain, Server, LineChart, FileSpreadsheet } from 'lucide-react'
+import { Database, Lightbulb, Clock, Users, MessageCircle, Shuffle, Brain, Server, LineChart, FileSpreadsheet, CameraIcon } from 'lucide-react'
 
 // Peta nama skill -> ikon. Kalau nama skill di data.js gak ketemu di sini,
 // otomatis pakai ikon default. "svg" pakai file logo asli dari public/tech-icons/,
@@ -9,18 +9,25 @@ const ICONS = {
   // Web (FE & BE)
   'React.js': { type: 'svg', src: '/tech-icons/react.svg' },
   'FastAPI': { type: 'svg', src: '/tech-icons/fastapi.svg' },
-  'Git & GitHub': { type: 'svg', src: '/tech-icons/git.svg' },
-  'Docker': { type: 'svg', src: '/tech-icons/docker.svg' },
   'HTML': { type: 'svg', src: '/tech-icons/html5.svg' },
   'CSS': { type: 'svg', src: '/tech-icons/css3.svg' },
+  'JavaScript': { type: 'svg', src: '/tech-icons/javascript.svg' },
   // Data
   'Python': { type: 'svg', src: '/tech-icons/python.svg' },
-  'TensorFlow / Keras': { type: 'svg', src: '/tech-icons/tensorflow.svg' },
-  'Excel': { type: 'lucide', Icon: FileSpreadsheet },
-  // Database
-  'PostgreSQL / Supabase': { type: 'svg', src: '/tech-icons/postgresql.svg' },
   'SQL': { type: 'lucide', Icon: Database },
+  'Amazon Redshift': { type: 'svg', src: '/tech-icons/Redshift.svg' },
+  'DBeaver': { type: 'svg', src: '/tech-icons/DBeaver.svg' },
+  'Excel': { type: 'lucide', Icon: FileSpreadsheet },
+  'AWS': { type: 'svg', src: '/tech-icons/AWS.svg' },
+  // AI
+  'Deep Learning': { type: 'svg', src: '/tech-icons/deep-learning.svg' },
+  'Tensorflow / Keras': { type: 'svg', src: '/tech-icons/tensorflow.svg' },
+  'Image Processing': { type: 'svg', src: '/tech-icons/image-processing.svg' },
+  // Database
+  'PostgreSQL': { type: 'svg', src: '/tech-icons/postgresql.svg' },
   'MySQL': { type: 'svg', src: '/tech-icons/mysql.svg' },
+  'Git & GitHub': { type: 'svg', src: '/tech-icons/git.svg' },
+  'Docker': { type: 'svg', src: '/tech-icons/docker.svg' },
   'MongoDB': { type: 'svg', src: '/tech-icons/mongodb.svg' },
   // Soft skill
   'Problem solving': { type: 'lucide', Icon: Lightbulb },
@@ -28,7 +35,8 @@ const ICONS = {
   'Teamwork': { type: 'lucide', Icon: Users },
   'Communication': { type: 'lucide', Icon: MessageCircle },
   'Adaptable': { type: 'lucide', Icon: Shuffle },
-  'Critical Thinking': { type: 'lucide', Icon: Brain }
+  'Critical Thinking': { type: 'lucide', Icon: Brain },
+  'Documentation': { type: 'lucide', Icon: CameraIcon }
 }
 
 function SkillCard({ label, fallback }) {
@@ -71,10 +79,11 @@ export default function Skills() {
         </div>
 
         <div className="space-y-14 max-w-4xl mx-auto">
-          <SkillGroup title="Web Development" subtitle="Frontend & Backend" items={skills.web} fallback={Server} />
-          <SkillGroup title="Data" subtitle="Machine Learning & Analisis" items={skills.data} fallback={LineChart} />
-          <SkillGroup title="Database" subtitle="Penyimpanan & Query Data" items={skills.database} fallback={Database} />
-          <SkillGroup title="Soft Skill" subtitle="Cara Kerja & Kolaborasi" items={skills.soft} fallback={Lightbulb} />
+          <SkillGroup title="Frontend & Backend" subtitle="Web Development" items={skills.web} fallback={Server} />
+          <SkillGroup title="Data Engineering & Analytics" subtitle="Data" items={skills.data} fallback={LineChart} />
+          <SkillGroup title="Machine Learning" subtitle="AI" items={skills.ml} fallback={LineChart} />
+          <SkillGroup title="Database & Infrastructure" subtitle="Database" items={skills.database} fallback={Database} />
+          <SkillGroup title="Project & Interpersonal" subtitle="Soft Skills" items={skills.soft} fallback={Lightbulb} />
         </div>
       </div>
     </section>

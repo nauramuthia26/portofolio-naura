@@ -28,7 +28,7 @@ export default function Contact() {
         <div>
           <h2 className="font-display font-extrabold text-3xl md:text-4xl mt-4 mb-6">Contact Me</h2>
           <p className="text-muted max-w-md mb-6">
-            Open to internship opportunities, project collaborations, or discussions about machine learning and web development.
+          Open to career opportunities, project collaborations, and discussions across Data Engineering, Web Development, Artificial Intelligence, and other areas of technology.
           </p>
           <div className="flex gap-4 mt-4">
             {profile.socials.map((s) => (

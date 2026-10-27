@@ -8,7 +8,7 @@
 
 export const profile = {
   name: "Naura Muthia Alwanadi",
-  role: "Informatics · Web Development & Data Engineering Enthusiast",
+  role: "Informatics Graduate · Data Engineering · Web Development · AI/ML",
   photo: "/photo.jpg",
   email: "nauraalwnd@gmail.com",
   location: "Tangerang, Indonesia",
@@ -21,8 +21,8 @@ export const profile = {
 export const about = {
   tag: "class: tentang-saya",
   paragraphs: [
-    "I am a Informatics graduate with an interest in Web Development, Machine Learning, and Data Engineering. This interest has grown through various academic projects and internship experiences that have given me the opportunity to learn about web application development, data processing, and the implementation of Artificial Intelligence (AI)-based technologies.",
-    "One of my most meaningful academic experiences was my PATTERNA thesis project, which involved developing a web application for fabric type and quality classification using Deep Learning. This project further strengthened my interest in continuously learning and developing technologies in this field."
+    "I am an Informatics graduate with internship experience in Data Engineering and hands-on experience in data integration, data processing, data validation, and data warehousing. Through my internship and academic projects, I have worked with SQL, Python, AWS, Amazon Redshift, databases, and web application development.",
+    "I am passionate about exploring technology, solving problems, and continuously developing my skills in Data Engineering, Web Development, and Artificial Intelligence (AI). I enjoy learning new technologies and applying them to practical projects."
   ]
 }
 
@@ -32,7 +32,7 @@ export const education = [
     degree: "Bachelor of Informatics, Faculty of Computer Science",
     nilai: "GPA 3.86 / 4.00",
     period: "2022 — 2026",
-    description: "Explored various areas of Computer Science through coursework, training, and internships, eventually developing a strong interest in data, machine learning, and web development, particularly frontend development."
+    description: "Studied core areas of Informatics, including programming, databases, data processing, and software development. Applied academic knowledge through internship experience and projects involving data engineering, machine learning, and web application development."
   },
   {
     institution: "SMA Negeri 12 Kota Tangerang",
@@ -44,12 +44,13 @@ export const education = [
 ]
 
 export const skills = {
-  web: ["React.js", "FastAPI", "Git & GitHub", "Docker", "HTML", "CSS"],
-  data: ["Python", "TensorFlow / Keras", "Excel"],
-  database: ["PostgreSQL / Supabase", "SQL"],
+  web: ["React.js", "FastAPI", "HTML", "CSS", "JavaScript"],
+  data: ["Python", "SQL", "Amazon Redshift", "DBeaver", "Excel", "AWS"],
+  ml: ["Deep Learning", "Tensorflow / Keras", "Image Processing"],
+  database: ["PostgreSQL", "MySQL", "Docker", "Git & GitHub"],
   soft: [
     "Problem solving", "Time Management", "Teamwork",
-    "Communication", "Adaptable", "Critical Thinking"
+    "Communication", "Adaptable", "Documentation"
   ]
 }       
 
@@ -58,11 +59,11 @@ export const internships = [
     company: "PT BTPN Syariah",
     role: "Data Platform Engineer Intern",
     period: "Juli — Oktober 2025",
-    summary: "Supported data integration and data warehouse management using AWS and SQL by contributing to data pipeline development, creating views in Amazon Redshift, and supporting data migration processes to ensure smooth and accurate data transfers.",
-    tools: ["DBeaver", "Amazon Redshift", "AWS DMS", "MySQL", "AWS CodePipeline", "Git"],
+    summary: "Supported data warehousing, data integration, and migration activities as part of the Data Platform team. Developed an Amazon Redshift view for ORBAS using SQL, investigated schema synchronization issues in a MySQL-to-S3-to-SQL Server workflow, and assisted with data migration using AWS Database Migration Service (DMS).",
+    tools: ["DBeaver", "Amazon Redshift", "AWS DMS", "SQL", "Git", "AWS Glue", "MySQL"],
     outcomes: [
-      "Adapted to various technologies such as AWS Redshift, AWS DMS, AWS Glue, and Git to support data warehousing and data integration processes in an enterprise environment.",
-      "Strengthened SQL and data validation skills, as well as understanding of data migration and deployment workflows through hands-on implementation with the Data Platform team."
+      "Strengthened SQL, data validation, and troubleshooting skills in an enterprise data environment.",
+      "Gained practical experience with data warehousing, schema synchronization, and database migration workflows."
     ],
     documentation: [
       { src: "/btpns-doc-1.jpg", caption: "Personal Documentation" },
@@ -75,11 +76,11 @@ export const internships = [
     company: "PT Jasa Marga Tollroad Maintenance",
     role: "Procurement Intern",
     period: "September 2024 — Januari 2025",
-    summary: "Contributed to vendor data validation and reconciliation using Microsoft Excel and an e-Procurement system, including matching physical documents with digital records to ensure data accuracy. Created flowcharts for the Vendor Management System (VMS), direct transactions, and simple tender processes to document procurement workflows.",
+    summary: "Validated vendor data and managed 50+ procurement documents using Microsoft Excel and the E-Procurement system, including tender records and evaluation documentation. Created and revised flowcharts for three procurement processes: Vendor Management System (VMS), direct transactions, and simple tenders.",
     tools: ["Microsoft Excel", "Microsoft Word", "Figma", "E-Procurement System"],
     outcomes: [
-      "Improved accuracy and attention to detail in validating, correcting, and reconciling vendor data using Microsoft Excel and an e-Procurement system.",
-      "Developed business process analysis skills by mapping procurement workflows into flowcharts to support process documentation."
+      "Improved accuracy and attention to detail through vendor data validation and procurement document management.",
+      "Developed business process mapping and documentation skills through collaboration with the Procurement team."
     ],
     documentation: [
       { src: "/jm-doc-1.jpg", caption: "Personal Documentation" },
@@ -93,8 +94,8 @@ export const projects = [
     tag: "class: proyek",
     name: "PATTERNA",
     period: "2025 — 2026",
-    summary: "PATTERNA is a full-stack web application that uses Deep Learning to classify fabric type and quality across 10 classes. The project compares several deep learning architectures and selects EfficientNetB0 as the best-performing model, achieving 82% accuracy and better rejection of non-fabric images. The system was deployed end-to-end with a React frontend on Vercel, FastAPI backend on Hugging Face Spaces, and Supabase PostgreSQL for data storage.",
-    tools: ["React.js", "Python", "FastAPI", "TensorFlow/Keras", "Supabase PostgreSQL"],
+    summary: "PATTERNA is a full-stack web application that classifies fabric types and quality into 10 classes using Deep Learning. The project compares multiple deep learning architectures and integrates the selected model into a web-based classification workflow with image preprocessing. The selected EfficientNetB0 model achieved 82% accuracy on the evaluated dataset. The application was developed using React.js and FastAPI, with PostgreSQL for data storage. It was deployed using Vercel for the frontend and Hugging Face Spaces for the backend, with Docker for containerization.",
+    tools: ["React.js", "Python", "FastAPI", "TensorFlow/Keras", "PostgreSQL", "Docker", "Vercel", "Hugging Face Spaces"],
     outcomes: [
       "The EfficientNetB0 model achieved 82% accuracy and demonstrated better rejection of non-fabric images compared with other models.",
       "The system was successfully implemented as a full-stack application, with the frontend deployed on Vercel and the backend on Hugging Face Spaces."
@@ -114,7 +115,7 @@ export const projects = [
     tag: "class: proyek",
     name: "WorshipFinder",
     period: "2025",
-    summary: "WorshipFinder is a web application for helping users find places of worship based on specific needs. It provides search and filtering features by worship place type, typology, province, and regency. The project primarily focused on implementing and testing the APIs and ensuring that the filtering and data retrieval functions work properly, while the frontend was kept simple and focused on the core features.",
+    summary: "WorshipFinder is a collaborative web application that helps users find places of worship across six religions in Indonesia. It features search and filtering by worship place type, typology, province, and regency. My contribution focused on frontend development and supporting search functionality, including API integration and data retrieval, to help users find relevant places of worship.",
     tools: ["JavaScript", "HTML", "CSS"],
     outcomes: [
       "Developed a web application for finding places of worship with filtering features based on multiple location categories and types of places of worship.",
@@ -131,7 +132,7 @@ export const projects = [
     tag: "class: proyek",
     name: "Effective Plan for UTBK",
     period: "2024",
-    summary: "Effective Plan for UTBK is a web interface designed to help students organize their UTBK preparation more effectively. It provides features for creating study plans, monitoring study progress, and accessing curated learning materials. The project focused primarily on frontend development and user interface design, using JavaScript, HTML, and CSS without a backend implementation.",
+    summary: "Effective Plan for UTBK is a web-based learning platform designed to support students in preparing for the university entrance examination. The application includes user registration, login, and session management, with PHP and MySQL supporting its web functionality. The platform provides learning resources for five subjects, including downloadable study materials, practice exercises, and YouTube tutorials.",
     tools: ["JavaScript", "PHP", "HTML", "CSS"],
     outcomes: [
       "Developed a web application interface to support planning and monitoring of UTBK study activities.",
