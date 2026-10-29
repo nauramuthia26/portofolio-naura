@@ -9,7 +9,7 @@
 export const profile = {
   name: "Naura Muthia Alwanadi",
   role: "Informatics Graduate · Data Engineering · Web Development · AI/ML",
-  photo: "/photo.jpg",
+  photo: "/photo-3.png",
   email: "nauraalwnd@gmail.com",
   location: "Tangerang, Indonesia",
   socials: [
@@ -59,7 +59,7 @@ export const internships = [
     company: "PT BTPN Syariah",
     role: "Data Platform Engineer Intern",
     period: "Juli — Oktober 2025",
-    summary: "Supported data warehousing, data integration, and migration activities as part of the Data Platform team. Developed an Amazon Redshift view for ORBAS using SQL, investigated schema synchronization issues in a MySQL-to-S3-to-SQL Server workflow, and assisted with data migration using AWS Database Migration Service (DMS).",
+    summary: "Supported data warehousing, data integration, and migration activities as part of the Data Platform team. Developed an Amazon Redshift view using SQL, investigated schema synchronization issues in a MySQL-to-S3-to-SQL Server workflow, and assisted with data migration using AWS Database Migration Service (DMS).",
     tools: ["DBeaver", "Amazon Redshift", "AWS DMS", "SQL", "Git", "AWS Glue", "MySQL"],
     outcomes: [
       "Strengthened SQL, data validation, and troubleshooting skills in an enterprise data environment.",
