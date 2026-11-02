@@ -19,6 +19,10 @@ const ICONS = {
   'DBeaver': { type: 'svg', src: '/tech-icons/DBeaver.svg' },
   'Excel': { type: 'lucide', Icon: FileSpreadsheet },
   'AWS': { type: 'svg', src: '/tech-icons/AWS.svg' },
+  'Data Integration': { type: 'svg', src: '/tech-icons/data-integration.svg' },
+  'Data Processing': { type: 'svg', src: '/tech-icons/data-processing.svg' },
+  'Data Warehousing': { type: 'svg', src: '/tech-icons/data-warehousing.svg' },
+  'Data Analyst': { type: 'svg', src: '/tech-icons/data-analyst.svg' },
   // AI
   'Deep Learning': { type: 'svg', src: '/tech-icons/deep-learning.svg' },
   'Tensorflow / Keras': { type: 'svg', src: '/tech-icons/tensorflow.svg' },
