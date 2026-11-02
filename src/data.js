@@ -264,7 +264,7 @@ export const organizations = [
 export const certificates = [
   { src: "/dashboard-excel-cert.jpg", title: "Excel Dashboard for Beginner", issuer: "Simplilearn with Microsoft", year: "2026" },
   { src: "/data-analyst-cert.jpg", title: "Data Analyst 101", issuer: "Simplilearn with Microsoft", year: "2026" },
-  { src: "/sql-cert.jpg", title: "Introduction to SQL", issuer: "Codepolitan", year: "2026" },
+  { src: "/sql-cert.jpg", title: "Introduction to SQL", issuer: "Simplilearn SkillUp", year: "2026" },
   { src: "/css-cert-1.jpg", title: "Basic CSS Class", issuer: "Codepolitan", year: "2026" },
   { src: "/bnsp-cert-2.jpg", title: "Program Assistant", issuer: "BNSP", year: "2025" },
   { src: "/deeplearning-cert-3.jpg", title: "Deep Learning with Tensorflow", issuer: "IBM", year: "2025" },
