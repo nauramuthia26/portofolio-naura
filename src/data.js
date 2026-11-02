@@ -8,7 +8,7 @@
 
 export const profile = {
   name: "Naura Muthia Alwanadi",
-  role: "Informatics Graduate · Data Engineering · Web Development · AI/ML",
+  role: "Informatics Graduate · Data Engineering · Data Analytics · Web Development · AI/ML",
   photo: "/photo-3.png",
   email: "nauraalwnd@gmail.com",
   location: "Tangerang, Indonesia",
@@ -21,8 +21,8 @@ export const profile = {
 export const about = {
   tag: "class: tentang-saya",
   paragraphs: [
-    "I am an Informatics graduate with internship experience in Data Engineering and hands-on experience in data integration, data processing, data validation, and data warehousing. Through my internship and academic projects, I have worked with SQL, Python, AWS, Amazon Redshift, databases, and web application development.",
-    "I am passionate about exploring technology, solving problems, and continuously developing my skills in Data Engineering, Web Development, and Artificial Intelligence (AI). I enjoy learning new technologies and applying them to practical projects."
+    "I am an Informatics graduate with internship experience in Data Engineering and Procurement, along with hands-on experience in data integration, data processing, data validation, and data warehousing. Through professional experience and practical projects, I have worked with SQL, Python, AWS, Amazon Redshift, Microsoft Excel, and web application development.",
+    "I am interested in applying technology and data analysis to improve data quality, support reporting, and enhance business processes. I enjoy solving problems, documenting workflows, and continuously developing my skills across data engineering, analytics, and technology."
   ]
 }
 
@@ -45,9 +45,9 @@ export const education = [
 
 export const skills = {
   web: ["React.js", "FastAPI", "HTML", "CSS", "JavaScript"],
-  data: ["Python", "SQL", "Amazon Redshift", "DBeaver", "Excel", "AWS"],
+  data: ["Python", "SQL", "Amazon Redshift", "Excel", "AWS", "Data Integration", "Data Processing", "Data Warehousing", "Data Analysis"],
   ml: ["Deep Learning", "Tensorflow / Keras", "Image Processing"],
-  database: ["PostgreSQL", "MySQL", "Docker", "Git & GitHub"],
+  database: ["PostgreSQL", "MySQL", "DBeaver", "Docker", "Git & GitHub", "AWS"],
   soft: [
     "Problem solving", "Time Management", "Teamwork",
     "Communication", "Adaptable", "Documentation"
@@ -92,6 +92,24 @@ export const internships = [
 export const projects = [
   {
     tag: "class: proyek",
+    name: "Procurement Spend Analysis Dashboard",
+    period: "2026",
+    summary: "An Excel-based procurement analytics project using 1,500 synthetic purchase order records generated with Python and pandas. Cleaned and validated data using Excel formulas, Tables, and issue flags to address duplicates, inconsistent vendor names, invalid values, and date formatting issues. Built an interactive dashboard with PivotTables, PivotCharts, and Slicers to analyze spending patterns and vendor performance. Key findings showed that the top 10 vendors accounted for approximately 61% of total spending, while Bronze-tier vendors had a 97.5% delay rate compared with 28.8% for Gold-tier vendors.",
+    tools: ["Microsoft Excel", "PivotTables", "PivotCharts", "Slicers", "Excel Formulas", "Python", "pandas"],
+    links: [
+      { label: "GitHub", url: "https://github.com/nauramuthia26/procurement-excel-dashboard" }
+    ],
+    documentation: [
+      { src: "/excel-project-1.png", caption: "Dashboard Overview" },
+      { src: "/excel-project-2.png", caption: "Data Cleaning vs Data Raw" },
+      { src: "/excel-project-3.png", caption: "Slicers Active" },
+      { src: "/excel-project-4.png", caption: "PivotTables Overview" },
+      { src: "/excel-project-5.png", caption: "Python Generate" }
+    ]
+  },
+
+  {
+    tag: "class: proyek",
     name: "PATTERNA",
     period: "2025 — 2026",
     summary: "PATTERNA is a full-stack web application that classifies fabric types and quality into 10 classes using Deep Learning. The project compares multiple deep learning architectures and integrates the selected model into a web-based classification workflow with image preprocessing. The selected EfficientNetB0 model achieved 82% accuracy on the evaluated dataset. The application was developed using React.js and FastAPI, with PostgreSQL for data storage. It was deployed using Vercel for the frontend and Hugging Face Spaces for the backend, with Docker for containerization.",
@@ -111,6 +129,7 @@ export const projects = [
       { src: "/patterna-project-4.jpeg", caption: "Mobile Compatibility" }
     ]
   },
+
   {
     tag: "class: proyek",
     name: "WorshipFinder",
@@ -243,7 +262,10 @@ export const organizations = [
 ] 
 
 export const certificates = [
-  { src: "/css-cert-1.jpg", title: "Basic CSS Class (Online)", issuer: "Codepolitan", year: "2026" },
+  { src: "/dashboard-excel-cert.jpg", title: "Excel Dashboard for Beginner", issuer: "Simplilearn with Microsoft", year: "2026" },
+  { src: "/data-analyst-cert.jpg", title: "Data Analyst 101", issuer: "Simplilearn with Microsoft", year: "2026" },
+  { src: "/sql-cert.jpg", title: "Introduction to SQL", issuer: "Codepolitan", year: "2026" },
+  { src: "/css-cert-1.jpg", title: "Basic CSS Class", issuer: "Codepolitan", year: "2026" },
   { src: "/bnsp-cert-2.jpg", title: "Program Assistant", issuer: "BNSP", year: "2025" },
   { src: "/deeplearning-cert-3.jpg", title: "Deep Learning with Tensorflow", issuer: "IBM", year: "2025" },
   { src: "/dataanalytics-cert-4.jpg", title: "Data Analytics", issuer: "Certiport", year: "2024" },
