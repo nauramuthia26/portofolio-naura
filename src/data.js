@@ -199,7 +199,6 @@ export const organizations = [
       { src: "/senat-2.jpeg", role: "FIK 2024/25 General Election Activities", caption: "Head of the Supervising Committee" },
       { src: "/senat-3.jpg", role: "Senat Day Out", caption: "Head of Consumption" },
       { src: "/senat-4.jpeg", role: "Legislative School", caption: "Master of Ceremony" },
-      { src: "/senat-5.jpg", role: "Comparative Study with DPM FIB UI", caption: "Participant" },
       { src: "/senat-6.jpeg", role: "FIK 2023/24 General Election Activities", caption: "Participant" }
     ]
   },
